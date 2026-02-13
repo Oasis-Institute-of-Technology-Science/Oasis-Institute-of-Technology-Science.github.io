@@ -1,0 +1,232 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全局字体设置 */
+body {
+    font-family: 'Inter', 'Helvetica', Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
+    background-color: #fff;
+}
+
+/* 顶部身份栏 */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 2px solid #000;
+}
+
+.logo-block {
+    width: 120px;
+    height: 120px;
+    background-color: #008080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.organization-type {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+/* 使命宣言区 */
+.mission-section {
+    padding: 8rem 0;
+    background-color: #fff;
+}
+
+.mission-title {
+    font-size: 8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    letter-spacing: -0.05em;
+}
+
+.mission-statement {
+    font-size: 1.5rem;
+    font-weight: 400;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+/* 研究领域矩阵 */
+.research-fields {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 4rem 0;
+}
+
+.field-block {
+    background-color: #008080;
+    color: #fff;
+    padding: 4rem 3rem;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field-number {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.field-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+/* 成员名单 */
+.people-section {
+    padding: 6rem 0;
+    background-color: #f5f5f5;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    letter-spacing: -0.03em;
+}
+
+.people-list {
+    list-style: none;
+}
+
+.person-item {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+/* 联络与社区 */
+.connectivity-section {
+    padding: 6rem 0;
+    background-color: #fff;
+}
+
+.connectivity-links {
+    display: flex;
+    gap: 4rem;
+}
+
+.connect-link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #008080;
+    text-decoration: none;
+    border-bottom: 2px solid #008080;
+    padding-bottom: 0.5rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.connect-link:hover {
+    color: #000;
+    border-bottom-color: #000;
+}
+
+/* 联系我们区域 */
+.contact-section {
+    padding: 4rem 0;
+    background-color: #008080;
+    color: #fff;
+    border-top: 2px solid #000;
+}
+
+.contact-email {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+/* 响应式设计 */
+@media (max-width: 1200px) {
+    .mission-title {
+        font-size: 6rem;
+    }
+    
+    .field-title {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .logo-block {
+        width: 80px;
+        height: 80px;
+        margin-right: 0;
+    }
+    
+    .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .organization-type {
+        font-size: 1rem;
+    }
+    
+    .mission-title {
+        font-size: 4rem;
+    }
+    
+    .research-fields {
+        grid-template-columns: 1fr;
+    }
+    
+    .field-block {
+        min-height: 200px;
+        padding: 3rem 2rem;
+    }
+    
+    .connectivity-links {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-title {
+        font-size: 3rem;
+    }
+    
+    .mission-statement {
+        font-size: 1.25rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
