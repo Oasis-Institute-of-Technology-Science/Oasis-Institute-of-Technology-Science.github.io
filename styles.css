@@ -268,6 +268,39 @@ body {
     }
 }
 
+/* Fotograf部分 */
+.fotograf-section {
+    padding: 6rem 0;
+    background-color: #fff;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.fotograf-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.fotograf-description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .fotograf-section {
+        padding: 4rem 0;
+    }
+    
+    .fotograf-description {
+        font-size: 1.25rem;
+    }
+}
+
 /* 使命宣言区 */
 .mission-section {
     padding: 8rem 0;
