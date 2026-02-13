@@ -10,11 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 导航菜单 -->
+    <nav class="nav-menu">
+        <div class="nav-container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#mission" class="nav-link">Mission</a></li>
+                <li class="nav-item"><a href="#research" class="nav-link">Research Fields</a></li>
+                <li class="nav-item"><a href="#people" class="nav-link">People</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#connectivity" class="nav-link">Connectivity</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#fotograf" class="nav-link">Fotograf</a></li>
+            </ul>
+            <button class="close-menu">×</button>
+        </div>
+    </nav>
+
     <!-- 顶部身份栏 -->
     <header class="site-header">
         <div class="header-left">
             <div class="logo-block">
                 <span class="logo-text">OITS</span>
+                <span class="logo-fullname">Oasis Institute of Technology Science</span>
             </div>
         </div>
         <div class="header-center">
@@ -30,13 +47,13 @@
     </header>
 
     <!-- 使命宣言区 -->
-    <section class="mission-section">
+    <section id="mission" class="mission-section">
         <h2 class="mission-title">Our Mission</h2>
         <p class="mission-statement">To advance the frontiers of technology and science through interdisciplinary research, education, and collaboration, fostering innovation for the benefit of humanity.</p>
     </section>
 
     <!-- 研究领域矩阵 -->
-    <section class="research-fields">
+    <section id="research" class="research-fields">
         <div class="field-block">
             <h3 class="field-number">01</h3>
             <h2 class="field-title">Computer Graphics</h2>
@@ -52,7 +69,7 @@
     </section>
 
     <!-- 成员名单 -->
-    <section class="people-section">
+    <section id="people" class="people-section">
         <h2 class="section-title">People</h2>
         <ul class="people-list">
             <li class="person-item">Founder: <a href="https://ceaserlab.github.io/" class="person-link">Ceaserzhao</a></li>
@@ -62,7 +79,7 @@
     </section>
 
     <!-- 项目区域 -->
-    <section class="projects-section">
+    <section id="projects" class="projects-section">
         <h2 class="section-title">Projects</h2>
         <div class="projects-container">
             <div class="project-item">
@@ -85,7 +102,7 @@
     </section>
 
     <!-- 联络与社区 -->
-    <section class="connectivity-section">
+    <section id="connectivity" class="connectivity-section">
         <h2 class="section-title">Connectivity</h2>
         <div class="connectivity-links">
             <a href="https://github.com/Oasis-Institute-of-Technology-Science" class="connect-link">GitHub</a>
@@ -95,8 +112,37 @@
     </section>
 
     <!-- 联系我们区域 -->
-    <footer class="contact-section">
+    <footer id="contact" class="contact-section">
         <p class="contact-email">Email: OITS@oermos.com</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 菜单功能
+        const menuButton = document.querySelector('.menu-button');
+        const closeMenuButton = document.querySelector('.close-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        // 打开菜单
+        menuButton.addEventListener('click', function() {
+            navMenu.classList.add('active');
+            menuButton.classList.add('active');
+        });
+
+        // 关闭菜单
+        function closeMenu() {
+            navMenu.classList.remove('active');
+            menuButton.classList.remove('active');
+        }
+
+        // 点击关闭按钮
+        closeMenuButton.addEventListener('click', closeMenu);
+
+        // 点击导航链接
+        navLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    </script>
 </body>
 </html>
