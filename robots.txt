@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Oasis-Institute-of-Technology-Science.github.io/sitemap.xml
